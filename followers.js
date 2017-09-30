@@ -15,7 +15,7 @@ fs.readFile("final.json","utf8",function(err,data){
                 if(languages.length==0)
                  {
                      
-                   var a2=[link1[0],link1[1]];
+                   var a2=[link1[0],followers];
                    languages.push(a2);
                  }
                  else
@@ -24,11 +24,22 @@ fs.readFile("final.json","utf8",function(err,data){
                     var h=0;
                     var s=0;
                     forEach(languages,function(link3,index3,arr3){
+                        
                         if(link3[0]==link1[0])
                         {
-                            h=link3[1];
+                            if(link3[1]==undefined)
+                            {
+                                console.log(link3[1]);
+                                h=0;
+                            }
+                            else
+                            {
+                                console.log(link3[1]);
+                                h=link3[1];
+                            }
                             s=index3;
                             x=1;
+                            
                         }
                         else
                         {
@@ -38,20 +49,22 @@ fs.readFile("final.json","utf8",function(err,data){
                     if(x==0)
                     {
                         
-                        var a1=[link1[0],link1[1]];
+                        var a1=[link1[0],followers];
                         languages.push(a1);
+                        
                     }
                     else
                     {
                         
-                        var a3=[link1[0],h+link1[1]];
+                        var a3=[link1[0],h+followers];
                         languages[s]=a3;
                     }
                 }
             });
            
         });
+        
         var g=JSON.stringify(languages);
-        fs.appendFile("language.json",g);
+        fs.appendFile("folowers.json",g);
     }
 });
