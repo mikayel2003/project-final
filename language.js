@@ -37,13 +37,14 @@ fs.readFile("final.json","utf8",function(err,data){
                     });
                     if(x==0)
                     {
-                        
+                     
                         var a1=[link1[0],link1[1]];
                         languages.push(a1);
                     }
                     else
                     {
-                        
+                       
+                      
                         var a3=[link1[0],h+link1[1]];
                         languages[s]=a3;
                     }

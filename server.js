@@ -1,6 +1,6 @@
 // server.js
 const jsonServer = require('json-server')
-const router = jsonServer.router('language.json')
+const router = jsonServer.router('read.json')
 const basicAuth = require('express-basic-auth')
 
 const server = jsonServer.create()

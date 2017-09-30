@@ -24,22 +24,19 @@ fs.readFile("final.json","utf8",function(err,data){
                     var h=0;
                     var s=0;
                     forEach(languages,function(link3,index3,arr3){
-                        
                         if(link3[0]==link1[0])
                         {
-                            if(link3[1]==undefined)
+                            if(link3[1]>0)
                             {
-                                console.log(link3[1]);
-                                h=0;
+                                h=link3[1];
                             }
                             else
                             {
-                                console.log(link3[1]);
-                                h=link3[1];
+                                h=0;
                             }
+                            
                             s=index3;
                             x=1;
-                            
                         }
                         else
                         {
@@ -48,14 +45,14 @@ fs.readFile("final.json","utf8",function(err,data){
                     });
                     if(x==0)
                     {
-                        
+                     
                         var a1=[link1[0],followers];
                         languages.push(a1);
-                        
                     }
                     else
                     {
-                        
+                       
+                      
                         var a3=[link1[0],h+followers];
                         languages[s]=a3;
                     }
@@ -63,8 +60,7 @@ fs.readFile("final.json","utf8",function(err,data){
             });
            
         });
-        
         var g=JSON.stringify(languages);
-        fs.appendFile("folowers.json",g);
+        fs.appendFile("followers.json",g);
     }
 });
