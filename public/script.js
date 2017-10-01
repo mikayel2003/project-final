@@ -115,7 +115,7 @@ function drawColumnChart() {
 				var data = google.visualization.arrayToDataTable(jsonData);	
 				
 			var options = {
-				title: 'Company Performance',
+				title: 'byte',
 				hAxis: { title: 'name', titleTextStyle: { color: 'red' } }
 			};
 
@@ -134,7 +134,7 @@ function drawColumnChart1() {
 				var data = google.visualization.arrayToDataTable(jsonData);	
 				
 			var options = {
-				title: 'Company Performance',
+				title: 'followers',
 				hAxis: { title: 'name', titleTextStyle: { color: 'red' } }
 			};
 
