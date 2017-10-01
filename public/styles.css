@@ -2,4 +2,21 @@
   width:2000px; 
   min-height: 450px;
 }
+#chart_div0
+{
+  z-index:1;
+  width:500px;
+}
 
+#chart_div3
+{
+  z-index:1;
+  width:500px;
+  display:block;
+}
+#chart_div10
+{
+  z-index:1;
+ 
+  display:block;
+}
